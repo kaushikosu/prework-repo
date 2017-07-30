@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data != null && data.getExtras() != null) {
             int position = data.getExtras().getInt("position");
-            if (resultCode == RESULT_OK && requestCode == 1 && position >=vzsfbs 0 && position < todoItems.size()) {
+            if (resultCode == RESULT_OK && requestCode == 1 && position >= 0 && position < todoItems.size()) {
                 if (data.getExtras().getString("editedText").equals("")){
                     todoItems.remove(position);
                 }
